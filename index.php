@@ -9,6 +9,6 @@ function sendMessage($id, $message){
 	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
-sendMessage($token, $id);
+sendMessage($id, 'hey');
 
 ?>
