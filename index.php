@@ -5,10 +5,10 @@ $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
 $token = '384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8';
 
-function sendMessage($id, $message){
+function sendMessage($token, $id, $message){
 	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
-sendMessage($id, 'hey');
+sendMessage($token, $id, 'hey');
 
 ?>
