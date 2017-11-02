@@ -11,7 +11,8 @@ function sendMessage($id, $message){
 
 switch($text){
 	case 'hi':
-		sendMessage($id, 'hello');
+		$message = 'hello';
+		sendMessage($id, $message);
 	break;
 	case 'hihi':
 		$message = 'hellohello';
@@ -22,5 +23,8 @@ switch($text){
 		$message = 'no';
 		sendMessage($id, $message);
 }
+
+		$message = 'hello';
+		sendMessage($id, $message);
 
 ?>
