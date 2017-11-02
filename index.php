@@ -9,6 +9,7 @@ switch($text){
 	case 'hi':
 		$message = 'hello';
 		sendMessage($id, $message);
+		sendMessage($id, 'hello');
 	break;
 	case 'hihi':
 		$message = 'hellohello';
