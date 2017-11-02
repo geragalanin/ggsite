@@ -4,7 +4,10 @@ $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $text = $output['message']['text'];
 
-file_get_contents("https://api.telegram.org/bot384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8/sendMessage?chat_id=".$id."&text=ih");
-
+if($text == 'hi'){
+	file_get_contents("https://api.telegram.org/bot384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8/sendMessage?chat_id=".$id."&text=ih");
+}else{
+	file_get_contents("https://api.telegram.org/bot384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8/sendMessage?chat_id=".$id."&text=hi");
+}
 
 ?>
