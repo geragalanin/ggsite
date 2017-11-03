@@ -22,6 +22,7 @@ switch($text){
 	default:
 		$message = 'no';
 		sendMessage($id, $message);
+	break;
 }
 
 		$message = 'no';
