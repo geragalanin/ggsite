@@ -9,7 +9,19 @@ function sendMessage($id, $message){
 	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
-
-		sendMessage($id, 'hello');
+switch($text){
+	case 'hi':
+		$message = 'hello';
+		sendMessage($id, $message);
+	break;
+	case 'hihi':
+		$message = 'hellohello';
+		sendMessage($id, $message);
+	break;
+	
+	default:
+		$message = 'no';
+		sendMessage($id, $message);
+}
 
 ?>
