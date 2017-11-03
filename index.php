@@ -10,7 +10,6 @@ function sendMessage($id, $message){
 }
 
 
-		$message = 'hello';
-		sendMessage($id, $message);
+		sendMessage($id, 'hello');
 
 ?>
