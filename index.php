@@ -11,7 +11,7 @@ switch($text){
 		file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 	break;
 	case 'hihi':
-		$message = 'hellohello';
+		$message = 'привет';
 		file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 	break;
 	default:		
