@@ -11,7 +11,8 @@ function sendMessage($message){
 
 switch($text){
 	case 'hi':
-		sendMessage('hello');
+		$message = 'hello';
+		sendMessage($message);
 }
 	
 ?>
