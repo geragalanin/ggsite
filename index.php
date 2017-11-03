@@ -5,10 +5,6 @@ $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
 $token = '384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8';
 
-function sendMessage($token, $id, $message){
-	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
-}
-
 switch($message){
 	case 'hi':
 		$message = 'hello';
@@ -24,4 +20,8 @@ switch($message){
 		sendMessage($id, $message);
 }
 
+function sendMessage($id, $message){
+	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
+}
+	
 ?>
