@@ -12,11 +12,26 @@ switch($text){
 	break;
 	case 'hihi':
 		$message = 'привет';
-		file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
+		SendMessage($message.KeyboardMenu());
 	break;
 	default:		
 		$message = 'no';
-		file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
+		SendMessage($message);
+}
+
+function SendMessage($message){
+	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message."");
+}
+
+function KeyboardMenu(){
+	$buttons = [['hi'],['hihi']];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+										  'resize_keyboard' => false,
+										  'one_time_keyboard' => false,
+										  'selective' => false]);
+	$replyKey = '&reply_markup='.$keyboard.'';
+	
+	return $replayKey; 
 }
 	
 ?>
