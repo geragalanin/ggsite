@@ -20,7 +20,7 @@ switch($text){
 }
 
 function SendMessage($message){
-	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message."");
+	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
 function KeyboardMenu(){
