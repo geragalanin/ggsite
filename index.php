@@ -11,7 +11,7 @@ switch($text){
 		SendMessage($token,$id,$message);
 	break;
 	case 'hihi':
-		$message = 'привет';
+		$message = 'hi';
 		SendMessage($token,$id,$message.KeyboardMenu());
 	break;
 	default:		
