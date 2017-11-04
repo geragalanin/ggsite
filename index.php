@@ -29,9 +29,9 @@ function KeyboardMenu(){
 										  'resize_keyboard' => true,
 										  'one_time_keyboard' => false,
 										  'selective' => true]);
-	$replyKey = '&reply_markup='.$keyboard.'';
+	$reply_markup = '&reply_markup='.$keyboard.'';
 	
-	return $replayKey; 
+	return $replay_markup; 
 }
 	
 ?>
