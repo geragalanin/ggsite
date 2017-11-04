@@ -16,10 +16,10 @@ switch($text){
 	break;
 	default:		
 		$message = 'no';
-		SendMessage($message);
+		SendMessage($token,$id,$message);
 }
 
-function SendMessage($message){
+function SendMessage($token,$id,$message){
 	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
