@@ -26,9 +26,9 @@ function SendMessage($token,$id,$message){
 function KeyboardMenu(){
 	$buttons = [['hi'],['hihi']];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
-										  'resize_keyboard' => false,
+										  'resize_keyboard' => true,
 										  'one_time_keyboard' => false,
-										  'selective' => false]);
+										  'selective' => true]);
 	$replyKey = '&reply_markup='.$keyboard.'';
 	
 	return $replayKey; 
