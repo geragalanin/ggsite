@@ -8,11 +8,11 @@ $token = '384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8';
 switch($text){
 	case 'hi':
 		$message = 'hello';
-		file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
+		SendMessage($token,$id,$message);
 	break;
 	case 'hihi':
 		$message = 'привет';
-		SendMessage($message.KeyboardMenu());
+		SendMessage($token,$id,$message.KeyboardMenu());
 	break;
 	default:		
 		$message = 'no';
