@@ -31,7 +31,7 @@ function KeyboardMenu(){
 										  'selective' => true]);
 	$reply_markup = '&reply_markup='.$keyboard.'';
 	
-	return $replay_markup; 
+	return $reply_markup; 
 }
 	
 ?>
