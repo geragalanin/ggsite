@@ -25,10 +25,10 @@ function SendMessage($token,$id,$message){
 
 function KeyboardMenu(){
 	$buttons = [['hi'],['hihi']];
-	$keyboard = json_encode($keyboard = ['keyboard' => $buttons, //кнопки 
-										  'resize_keyboard' => false, //размер кнопок
-										  'one_time_keyboard' => true, //убирается само
-										  'selective' => true]);
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,       //кнопки 
+										  'resize_keyboard' => true,  //размер кнопок норм, если true
+										  'one_time_keyboard' => true, //убирается само, если true
+										  'selective' => false]);
 	$reply_markup = '&reply_markup='.$keyboard.'';
 	
 	return $reply_markup; 
