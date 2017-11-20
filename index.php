@@ -7,7 +7,7 @@ $token = '384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8';
 
 
 if(isset($output['callback_query']['data'])){
-	checkInline($output, $token);
+	checkInline($output, $token);	
 }
 
 
@@ -32,11 +32,6 @@ switch($text){
 
 function SendMessage($token,$id,$message){
 	file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
-}
-
-
-function Edit($token,$id,$msgID,$message){
-	file_get_contents("https://api.telegram.org/bot".$token."/editMessageText?chat_id=".$id."&message_id=".$msgID."&text=".$message);
 }
 
 
@@ -70,9 +65,8 @@ function inlineKeyboard(){
 
 function checkInline($output, $token){
 	$id = $output['callback_query']['message']['chat']['id'];
-	$msgID = $output['callback_query']['message']['message_id'];
-	$message = 'Doooooone';
-	Edit($token,$id,$msgID,$message);
+	$message = $output['callback_query']['data'];
+	SendMessage($token,$id,$message);
 }
 
 	
