@@ -7,7 +7,7 @@ $token = '384628942:AAFoapuIipUZEAwi2NQoNElgF6uXfBdWFu8';
 
 
 if(isset($output['callback_query']['data'])){
-	checkInline($output, $token);	
+	checkInline($output, $token);
 }
 
 
