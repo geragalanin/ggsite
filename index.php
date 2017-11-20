@@ -14,6 +14,10 @@ switch($text){
 		$message = 'hi';
 		SendMessage($token,$id,$message.KeyboardMenu());
 	break;
+	case 'in':
+		$message = 'Done';
+		SendMessage($token,$id,$message.inlineKeyboard());
+	break;
 	default:		
 		$message = 'no';
 		SendMessage($token,$id,$message);
@@ -29,8 +33,22 @@ function KeyboardMenu(){
 										  'resize_keyboard' => true,   //размер кнопок норм, если true
 										  'one_time_keyboard' => true, //убирается сама, если true
 										  'selective' => true]);
+										  
 	$reply_markup = '&reply_markup='.$keyboard.'';
+	return $reply_markup; 
+}
+
+function inlineKeyboard(){
+	$reply_markup = '';
 	
+	$x1 = array('text' => 'Inline_one', 'collback_data' => 'Inline_one');
+	$x2 = array('text' => 'Inline_five', 'collback_data' => 'Inline_five');
+	$opz = [[$x1], [$x2]];
+	
+	$keyboard = array('inline_keyboard' => $opz);
+	$keyboard = json_encode($keyboard, true);
+	
+	$reply_markup = '&reply_markup='.$keyboard.'';
 	return $reply_markup; 
 }
 	
