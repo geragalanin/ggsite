@@ -35,6 +35,11 @@ function SendMessage($token,$id,$message){
 }
 
 
+function Edit($token,$id,$msgID,$message){
+	file_get_contents("https://api.telegram.org/bot".$token."/editMessageText?chat_id=".$id."&message_id=".$msgID."&text=".$message);
+}
+
+
 function KeyboardMenu(){
 	$buttons = [['hi'],['hihi']];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,       //кнопки 
@@ -65,8 +70,9 @@ function inlineKeyboard(){
 
 function checkInline($output, $token){
 	$id = $output['callback_query']['message']['chat']['id'];
-	$message = $output['callback_query']['data'];
-	SendMessage($token,$id,$message);
+	$id = $output['callback_query']['message']['message_id'];
+	$message = 'Doooooone';
+	Edit($token,$id,$message);
 }
 
 	
