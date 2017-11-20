@@ -70,9 +70,9 @@ function inlineKeyboard(){
 
 function checkInline($output, $token){
 	$id = $output['callback_query']['message']['chat']['id'];
-	$id = $output['callback_query']['message']['message_id'];
+	$msgID = $output['callback_query']['message']['message_id'];
 	$message = 'Doooooone';
-	Edit($token,$id,$message);
+	Edit($token,$id,$msgID,$message);
 }
 
 	
