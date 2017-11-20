@@ -43,6 +43,7 @@ function inlineKeyboard(){
 	
 	$x1 = array('text' => 'Inline_one', 'callback_data' => 'Inline_one');
 	$x2 = array('text' => 'Inline_five', 'callback_data' => 'Inline_five');
+	$x2 = array('text' => 'Inline_ten', 'url' => 'http://ggsite.ru');
 	$opz = [[$x1], [$x2]];
 	
 	$keyboard = array('inline_keyboard' => $opz);
